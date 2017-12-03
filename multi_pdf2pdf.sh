@@ -2,7 +2,7 @@
 
 #!/bin/bash
 
-#printf "Content-type: text/html\n\n"
+"Content-type: text/html\n\n"
 
 #printf "$1"
 #printf "<br><br><br>"
@@ -34,20 +34,24 @@ dest2=$path$value2
 #printf "$dest2"
 #printf "<br>"
 
+#printf "before convert <br>"
 a=$2
 b=0
+c=''
 if [ $a -eq $b ];then
+    printf "converting ........"
     sudo convert $dest0 $dest1
-    printf "converted"
 else
-    printf "not converted"
-    mv $dest0 $dest1
+    printf "moving pdf ........"
+    for i in $dest0
+    {
+	c=$c' '$i
+    }
+    pdfunite $c $dest1
 fi
 
-
-#sudo convert /var/www/html/ocr_webapp/uploads/* /var/www/html/ocr_webapp/downloads/images.pdf
-#sudo ocrmypdf -l eng+hin $dest1  $dest2
-sudo ocrmypdf -l tel+eng+hin --image-dpi 300 --pdf-renderer=tesseract --output-type=pdf $dest1 $dest2
+#sudo ocrmypdf $dest1  $dest2
+sudo ocrmypdf -l tel+eng+hin --pdf-renderer=tesseract --output-type=pdf $dest1 $dest2
 
 sudo chmod 755 /var/www/html/ocr_webapp/upload/server/php/downloads/*
 
@@ -56,5 +60,4 @@ rmdir $folder
 printf "done ocr"
 
 sudo rm $dest1
-
 

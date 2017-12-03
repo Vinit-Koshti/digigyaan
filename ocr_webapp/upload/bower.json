@@ -1,0 +1,60 @@
+{
+  "name": "peerxp-file-upload",
+  "version": "2.0",
+  "title": "Raj DigiGyaan  File Upload",
+  "description": "Raj DigiGyaan File Upload by PeerXP Developers",
+  "keywords": [
+    "jquery",
+    "file",
+    "upload",
+    "widget",
+    "multiple",
+    "selection",
+    "drag",
+    "drop",
+    "progress",
+    "preview",
+    "cross-domain",
+    "cross-site",
+    "chunk",
+    "resume",
+    "gae",
+    "go",
+    "python",
+    "php",
+    "bootstrap"
+  ],
+  "homepage": "localhost",
+  "author": {
+    "name": "PeerXP Developers",
+    "url": "https://www.peerxp.com"
+  },
+  "maintainers": [
+    {
+    "name": "PeerXP Developers",
+    "url": "https://www.peerxp.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/peerxp-dev/digigyaan.git"
+  },
+  "bugs": "https://github.com/peerxp-dev/digigyaan.git/issues",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "main": [
+    "js/jquery.fileupload.js"
+  ],
+  "ignore": [
+    "/*.*",
+    "/cors",
+    "css/demo-ie8.css",
+    "css/demo.css",
+    "css/style.css",
+    "js/app.js",
+    "js/main.js",
+    "server",
+    "test"
+  ]
+}

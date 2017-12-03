@@ -1,4 +1,4 @@
-#peerxp-digigyaan
+#Developers: peerxp
 
 #!/bin/bash
 

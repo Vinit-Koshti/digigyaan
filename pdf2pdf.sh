@@ -47,7 +47,7 @@ fi
 
 #sudo convert /var/www/html/ocr_webapp/uploads/* /var/www/html/ocr_webapp/downloads/images.pdf
 #sudo ocrmypdf -l eng+hin $dest1  $dest2
-sudo ocrmypdf -l tel+eng+hin --image-dpi 300 --pdf-renderer=tesseract --output-type=pdf $dest1 $dest2
+sudo ocrmypdf -l tel+eng+hin --pdf-renderer=tesseract --output-type=pdf $dest1 $dest2
 
 sudo chmod 755 /var/www/html/ocr_webapp/upload/server/php/downloads/*
 
